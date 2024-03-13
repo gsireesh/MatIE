@@ -104,6 +104,7 @@ def init(conf: TrNIConf = None, **kwargs):
     torch.set_num_threads(min(conf.num_threads, int(os.environ.get('OMP_NUM_THREADS', 100))))
     init_seed(conf.seed0)  # first init a fixed one!
     if conf.device >= 0:
+        print('conf.device',conf.device)
         DEFAULT_DEVICE = torch.device(f"cuda:{conf.device}")
         zlog(f"Init NN with default_device={DEFAULT_DEVICE}")
         zlog(f"GPU-info:\n{get_sysinfo(ret_str=False, get_gpu_info=True)['gpu']}")

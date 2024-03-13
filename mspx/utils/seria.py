@@ -265,7 +265,7 @@ class _JsonRW(_BaseRW):
     def from_obj(self, s: str, **kwargs): return self._load(json.loads(s, **kwargs))
     def to_obj(self, one: object, **kwargs): return json.dumps(one, cls=_MyJsonEncoder, ensure_ascii=False, **kwargs)
     def to_fd_one(self, one: object, fd, **kwargs): fd.write(self.to_obj(one, **kwargs) + "\n")
-
+    # def to_fd_one(self, one: object, fd, **kwargs): fd.write(self.to_obj(one, **kwargs))
     def from_fd_one(self, fd, **kwargs):
         line = fd.readline()
         if len(line) == 0:

@@ -18,7 +18,8 @@ class MainConf(Conf):
         self.specific_ann_conf = ""  # mat?
         self.conf_add_nil = True  # add N* ones?
         # self.convert = BratFormatorConf('simple0').direct_update(char_map=":_", rm_text_positions=True)
-        self.convert = BratFormatorConf('simple0').direct_update(rm_text_positions=True, store_orig_ann_info=True)
+        # self.convert = BratFormatorConf('simple0').direct_update(rm_text_positions=True, store_orig_ann_info=True)
+        self.convert = BratFormatorConf('simple0').direct_update(rm_text_positions=False, store_orig_ann_info=True)
         self.z2b_filter = ''
         self.b2z_filter = ''
         self.query_add_score = False  # add query scores
