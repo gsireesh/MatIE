@@ -9,5 +9,4 @@ RUN pip install -r requirements.txt
 COPY . /matIE
 ENV PYTHONPATH=/matIE
 
-CMD ["uvicorn", "matie_api:app", "--host", "0.0.0.0"]
-
+CMD ["uvicorn", "matie_service:app", "--host", "0.0.0.0"]
