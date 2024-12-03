@@ -173,5 +173,4 @@ def annotate_strings(key_to_string: Dict[str, str]) -> MatIEResponse:
             annotated_content["text"] = annotated_text
         return_content[key] = annotated_content
 
-    logger.info(return_content)
     return return_content
