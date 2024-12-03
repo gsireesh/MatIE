@@ -1,3 +1,6 @@
+#!/bin/bash
+
+set -euxo pipefail
 #
 
 # decoding from ${INPUT_DIR}/*.txt to ${OUTPUT_DIR}/*.{txt,ann}
