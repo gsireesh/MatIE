@@ -1,0 +1,9 @@
+scipy
+pandas
+nltk
+transformers==4.8.2
+datasets
+stanza
+scikit-learn
+fastapi~=0.103.2
+uvicorn[standard]
